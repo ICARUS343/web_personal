@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
     },
     main_media:{
         position: 'center',
-        paddingRight: '50%',
-        paddingLeft: '20%',
+       paddingLeft: '3%',
+        align: 'center',
     },
     media: {
         width: '80vh',
