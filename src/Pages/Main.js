@@ -1,19 +1,21 @@
+
 import React from 'react';
-import AppBar from '../Component/ButtonAppBar'
+import TopAppBar from "../Component/TopAppBar";
+
+
+
 
 const MainPage = () => {
 
-    render(
-        <div>
-            <AppBar/>
-
-        </div>
+        return (
 
 
-    );
+                <TopAppBar/>
 
 
+        );
+    }
 
-}
 
 export default MainPage;
+
