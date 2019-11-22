@@ -78,9 +78,10 @@ ScrollTop.propTypes = {
 export default function BackToTop(props) {
     const classes = useStyles();
     return (
+
         <React.Fragment>
             <CssBaseline />
-            <AppBar>
+            <AppBar color={ '#000000'}>
                 <Toolbar>
                     <Link to="/MainBody">
                         <Fab variant="extended" aria-label="like" className={classes.fab}>
@@ -88,13 +89,6 @@ export default function BackToTop(props) {
                             <Typography fontSize={ "large"}>Home</Typography>
 
                         </Fab>
-                    </Link>
-                    <Link to="/ProjectPlates">
-                    <Fab variant="extended" aria-label="like" className={classes.fab}>
-                        <StorageRoundedIcon className={classes.extendedIcon} />
-                        <Typography fontSize={ "large"}>Project</Typography>
-
-                    </Fab>
                     </Link>
 
 

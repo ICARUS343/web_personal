@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Media() {
+export default function Media(props) {
 
     const classes = useStyles();
 
@@ -54,31 +54,14 @@ export default function Media() {
                         </IconButton>
 
                 }
-                title={ 'Face recognition'}
+                title={ <Typography variant="h5">{props.title}</Typography>}
                 subheader={ 'Python'}
             />
             <CardContent>
                 { (
                     <Typography variant="h6" color="textSecondary" component="p">
                         {
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image."
+                            props.content1
 
                         }
                     </Typography>
@@ -88,7 +71,7 @@ export default function Media() {
                 <div className={classes.main_media}>
                 <CardMedia
                     className={classes.media}
-                    image="https://files.realpython.com/media/face-detection-abba.ea2dcc6d3bda.jpg"
+                    image={props.image}
                     title="Face"
                 />
 
@@ -98,24 +81,7 @@ export default function Media() {
                 { (
                     <Typography variant="h6" color="textSecondary" component="p" aria-setsize={12}>
                         {
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image." +
-                            "Used openCV and a facial cascade to find faces in any given image."
+                            props.content2
 
                         }
                     </Typography>

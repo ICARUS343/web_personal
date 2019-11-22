@@ -11,7 +11,7 @@ import {
 
 
 import MainPage from "./Pages/Main";
-import ProjectsPlates from './Pages/ProjectPage';
+
 import MainBody from "./Component/MainBody";
 import Contact from "./Pages/ContactPage";
 import LoginPage from "./Pages/Login";
@@ -26,7 +26,7 @@ class App extends Component {
         <Router>
           {/*All our Routes goes here!*/}
           <Route path="/" component={MainPage} />
-          <Route exact path ="/ProjectPlates" component={ProjectsPlates}/>
+
             <Route exact path ="/MainBody" component={MainBody}/>
             <Route exact path ="/Contact" component={Contact}/>
             <Route exact path ="/LoginPage" component={LoginPage}/>
