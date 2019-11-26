@@ -8,7 +8,7 @@ const MainPage = () => {
 
         return (
 
-            <Link to = "/MainBody"> <TopAppBar/> </Link>
+           <TopAppBar/>
 
 
 

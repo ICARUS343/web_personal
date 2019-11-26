@@ -116,14 +116,10 @@ export default function ArticlePage() {
 
             <Container >
             <TabPanel value={value} index={0}>
-                <Media title = {'Face Recognition'} content1 = {[...new Array(20)]
-                    .map(
-                        () => `Cras mattis consectetur purus sit amet fermentum.
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                    )
-                    .join('\n')}
+                <Media title = {'Face Recognition'}
+                       content1 = {"Used openCV and a facial cascade to find faces in an image." +'\n'+
+                       "The [haarcascade_frontalface_default.xml]  Stump-based 24x24 discrete adaboost frontal face detector," +
+                       " created by Rainer Lienhart. "}
                        content2 =  {[...new Array(20)]
                     .map(
                         () => `Cras mattis consectetur purus sit amet fermentum.
