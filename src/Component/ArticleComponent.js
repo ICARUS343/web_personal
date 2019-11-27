@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: '4px',
         padding: '5px',
         width: 'auto',
-        height: '50vh'
+        height: '30vh'
 
     }
 
