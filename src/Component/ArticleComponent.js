@@ -17,12 +17,14 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
 
     },
-    main_media:{
-        position: 'center',
-        align: 'center',
-        width: '80vh',
+    main_media: {
+        border: '1px solid #ddd',
+        borderRadius: '4px',
+        padding: '5px',
+        width: 'auto',
         height: '50vh'
-    },
+
+    }
 
 }));
 
