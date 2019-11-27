@@ -12,24 +12,20 @@ import LongMenu from "./VerticalIcon";
 
 const useStyles = makeStyles(theme => ({
     card: {
-
-        margin: theme.spacing(2),
         paddingLeft: '10%',
         paddingRight: '10%',
         width: '100%',
 
     },
-    main_media:{
-        position: 'center',
-       paddingLeft: '3%',
-        align: 'center',
-    },
-    media: {
-        width: '80vh',
+    main_media: {
+        border: '1px solid #ddd',
+        borderRadius: '4px',
+        padding: '5px',
+        width: 'auto',
+        height: '50vh'
 
-        height: '50vh',
+    }
 
-    },
 }));
 
 export default function Media(props) {
@@ -68,14 +64,14 @@ export default function Media(props) {
                 )}
             </CardContent>
 
-                <div className={classes.main_media}>
+
                 <CardMedia
-                    className={classes.media}
+                    className = {classes.main_media}
                     image={props.image}
                     title="Face"
                 />
 
-                </div>
+
 
             <CardContent>
                 { (

@@ -8,9 +8,9 @@ import Box from '@material-ui/core/Box';
 import Container from "@material-ui/core/Container";
 import Media from "../Component/ArticleComponent";
 
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-
     return (
         <Typography
             component="div"
@@ -40,43 +40,38 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
     main:{
-
         paddingLeft: '10%',
         paddingRight: '10%',
         height: '100%',
-
     },
     root: {
-
         backgroundColor: theme.palette.background.paper,
         display: 'flex',
-
         borderRight: `1px solid ${theme.palette.divider}`,
         width: '200px',
         height: '100vh', /* Full-height: remove this if you want "auto" height */
-
         position: 'fixed', /* Fixed Sidebar (stay in place on scroll) */
         zIndex: 1, /* Stay on top */
-       
-
-
-
-
     },
-
-   
     second:{
-
-
         backgroundColor: '#b0b0ab',
         marginLeft: '200px', /* Same as the width of the sidebar */
-
-
     }
-
 }));
 
 export default function ArticlePage() {
+
+    const face_recognition = ["Used openCV and a facial cascade to find faces in an image.\n"  +
+    " The [haarcascade_frontalface_default.xml]  Stump-based 24x24 discrete adaboost frontal face detector" +
+    " created by Rainer Lienhart.",
+        "To run the code clone or download the project repo from GitHub. " +
+        "Install python 3 in your computer."
+        ,"https://files.realpython.com/media/face-detection-abba.ea2dcc6d3bda.jpg"]
+
+
+
+
+
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
@@ -95,16 +90,15 @@ export default function ArticlePage() {
                 value={value}
                 onChange={handleChange}
                 aria-label="Vertical tabs example"
-
             >
 
 
                 <Tab label="Face recognition" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
-                <Tab label="Item Three" {...a11yProps(2)} />
-                <Tab label="Item Four" {...a11yProps(3)} />
-                <Tab label="Item Five" {...a11yProps(4)} />
-                <Tab label="Item Six" {...a11yProps(5)} />
+                <Tab label="Kafka Introduction" {...a11yProps(1)} />
+                <Tab label="Kafka Producer in Java" {...a11yProps(2)} />
+                <Tab label="Kafka Consumer in Java" {...a11yProps(3)} />
+                <Tab label="Using faker in ReactJS" {...a11yProps(4)} />
+                <Tab label="A basic database implementation in C" {...a11yProps(5)} />
 
 
 
@@ -116,23 +110,10 @@ export default function ArticlePage() {
 
             <Container >
             <TabPanel value={value} index={0}>
-                <Media title = {'Face Recognition'} content1 = {[...new Array(20)]
-                    .map(
-                        () => `Cras mattis consectetur purus sit amet fermentum.
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                    )
-                    .join('\n')}
-                       content2 =  {[...new Array(20)]
-                    .map(
-                        () => `Cras mattis consectetur purus sit amet fermentum.
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                    )
-                    .join('\n')}
-                image = "https://files.realpython.com/media/face-detection-abba.ea2dcc6d3bda.jpg"
+                <Media title = {'Face Recognition'}
+                       content1 = {face_recognition[0]}
+                       content2 =  {face_recognition[1]}
+                image = {face_recognition[2]}
 
 
                 />
