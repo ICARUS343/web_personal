@@ -26,6 +26,7 @@ class App extends Component {
         <Router>
           {/*All our Routes goes here!*/}
           <Route path="/" component={MainPage} />
+          <Redirect exact from="/" to="/MainBody" />
 
             <Route exact path ="/MainBody" component={MainBody}/>
             <Route exact path ="/Contact" component={Contact}/>
