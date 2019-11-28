@@ -1,135 +1,59 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import Zoom from '@material-ui/core/Zoom';
-import HomeIcon from '@material-ui/icons/Home';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import ContactsRoundedIcon from '@material-ui/icons/ContactsRounded';
-import StorageRoundedIcon from '@material-ui/icons/StorageRounded';
-import {Link} from "react-router-dom";
 
 
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        position: 'fixed',
-        bottom: theme.spacing(2),
-        right: theme.spacing(2),
 
-    },
-    fab: {
-        margin: theme.spacing(1.8),
-    },
-    extendedIcon: {
-        marginRight: theme.spacing(1),
-    },
-    right:{
-        position:'absolute',
-        right:19,
-    },
+import React, { Component } from 'react'
+import { Menu, Segment } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
-}));
+export default class TopAppBar extends Component {
+    state = { activeItem: 'Home' }
 
-function ScrollTop(props) {
-    const { children, window } = props;
-    const classes = useStyles();
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
-        disableHysteresis: true,
-        threshold: 100,
-    });
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
-    const handleClick = event => {
-        const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+    render() {
+        const { activeItem } = this.state
 
-        if (anchor) {
-            anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    };
-
-    return (
-        <Zoom in={trigger}>
-            <div onClick={handleClick} role="presentation" className={classes.root}>
-                {children}
-            </div>
-        </Zoom>
-    );
-}
-
-ScrollTop.propTypes = {
-    children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
-
-export default function BackToTop(props) {
-    const classes = useStyles();
-    return (
-
-        <React.Fragment>
-            <CssBaseline />
-            <AppBar color={ '#000000'}>
-                <Toolbar>
+        return (
+            <div>
+                <Menu pointing secondary style={{ paddingLeft: '25PX ' }}>
                     <Link to="/MainBody">
-                        <Fab variant="extended" aria-label="like" className={classes.fab}>
-                            <HomeIcon className={classes.extendedIcon} />
-                            <Typography fontSize={ "large"}>Home</Typography>
-
-                        </Fab>
+                        <Menu.Item
+                            name='Home'
+                            active={activeItem === 'Home'}
+                            onClick={this.handleItemClick}
+                        />
                     </Link>
-
-
                     <Link to="/ArticlePage">
-                        <Fab variant="extended" aria-label="like" className={classes.fab}>
-                            <AccountBoxIcon className={classes.extendedIcon} />
-                            <Typography fontSize={ "large"}>Article</Typography>
-
-                        </Fab>
+                        <Menu.Item
+                            name='Article'
+                            active={activeItem === 'Article'}
+                            onClick={this.handleItemClick}
+                        />
                     </Link>
                     <Link to="/Contact">
-                        <Fab variant="extended" aria-label="like" className={classes.fab}>
-                            <ContactsRoundedIcon className={classes.extendedIcon} />
-                            <Typography fontSize={ "large"}>Contact</Typography>
-
-                        </Fab>
+                        <Menu.Item
+                            name='Contact'
+                            active={activeItem === 'Contact'}
+                            onClick={this.handleItemClick}
+                        />
                     </Link>
-
-
-                    <div className = {classes.right} >
+                    <Menu.Menu position='right' style={{ paddingRight: '25PX' }}>
                     <Link to="/LoginPage" >
-                        <Fab variant="extended" aria-label="like"  className={classes.fab} >
-                            <AccountBoxIcon className={classes.extendedIcon} />
-                            <Typography fontSize={ "large"}>LogIn</Typography>
 
-                        </Fab>
+                            <Menu.Item
+                                name='LogIn'
+                                active={activeItem === 'LogIn'}
+                                onClick={this.handleItemClick}
+
+                            />
+
                     </Link>
-                    </div>
+                    </Menu.Menu>
+                </Menu>
 
 
-
-                </Toolbar>
-            </AppBar>
-            <Toolbar id="back-to-top-anchor" />
-
-            <ScrollTop {...props}>
-                <Fab color="secondary" size="small" aria-label="scroll back to top">
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
-        </React.Fragment>
-    );
+            </div>
+        )
+    }
 }

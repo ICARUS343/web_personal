@@ -30,6 +30,7 @@ export default function MainBody() {
 
 
     return (
+        <div>
         <Box>
             <Segment style={{ padding: '8em 0em' }} vertical>
                 <Grid container stackable verticalAlign='middle'>
@@ -67,17 +68,16 @@ export default function MainBody() {
                     <Grid.Row textAlign='center'>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                             <Header as='h3' style={{ fontSize: '2em' }}>
-                                "What a Company"
+                                "What is Apache Kafka?"
                             </Header>
-                            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+                            <p style={{ fontSize: '1.33em' }}>It's amazing!! Find out more.</p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                             <Header as='h3' style={{ fontSize: '2em' }}>
-                                "I shouldn't have gone with their competitor."
+                                "Paranoid about apps tracking you?"
                             </Header>
                             <p style={{ fontSize: '1.33em' }}>
-                                <Image avatar src='/images/avatar/large/nan.jpg' />
-                                <b>Nan</b> Chief Fun Officer Acme Toys
+                                 Learn about analytics and stay one step ahead.
                             </p>
                         </Grid.Column>
                     </Grid.Row>
@@ -86,7 +86,7 @@ export default function MainBody() {
             <Segment style={{ padding: '8em 0em' }} vertical>
                 <Container text>
                     <Header as='h3' style={{ fontSize: '2em' }}>
-                        Breaking The Grid, Grabs Your Attention
+                        What is Apcahe Kafka?
                     </Header>
                     <p style={{ fontSize: '1.33em' }}>
                         Instead of focusing on content creation and hard work, we have learned how to master the
@@ -152,5 +152,6 @@ export default function MainBody() {
                 </Container>
             </Segment>
         </Box>
+        </div>
     );
 }
