@@ -5,11 +5,29 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
+import { useAuth0 } from "../react-auth0-spa";
 
+
+const NavBar = () => {
+    const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+    return (
+        <div>
+            {!isAuthenticated && (
+                <button onClick={() => loginWithRedirect({})}>Log in</button>
+            )}
+
+            {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+        </div>
+    );
+};
 export default class TopAppBar extends Component {
     state = { activeItem: 'Home' }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+
+
 
     render() {
         const { activeItem } = this.state
@@ -38,6 +56,7 @@ export default class TopAppBar extends Component {
                             onClick={this.handleItemClick}
                         />
                     </Link>
+                    <NavBar/>
                     <Menu.Menu position='right' style={{ paddingRight: '25PX' }}>
                     <Link to="/LoginPage" >
 
@@ -47,6 +66,7 @@ export default class TopAppBar extends Component {
                                 onClick={this.handleItemClick}
 
                             />
+
 
                     </Link>
                     </Menu.Menu>

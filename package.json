@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@auth0/auth0-spa-js": "^1.6.0",
     "@material-ui/icons": "^4.5.1",
     "faker": "^4.1.0",
     "react-router-dom": "^5.1.2",
