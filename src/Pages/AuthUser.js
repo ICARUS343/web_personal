@@ -40,8 +40,7 @@ export default function AuthUser() {
                                     Built for fun
                                 </Header>
                                 <p style={{ fontSize: '1.33em' }}>
-                                    I built this website first just to play around with react and some backend with MongoDB then decided to
-                                    put up some articles which might be helpful for CS students and decided to host it.
+
                                 </p>
                                 <Header as='h3' style={{ fontSize: '2em' }}>
                                     Want to check out some fun projects!!

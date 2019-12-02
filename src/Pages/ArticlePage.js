@@ -40,32 +40,37 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
     main:{
-        paddingLeft: '10%',
-        paddingRight: '10%',
         height: '100%',
     },
     root: {
         backgroundColor: theme.palette.background.paper,
         display: 'flex',
         borderRight: `1px solid ${theme.palette.divider}`,
-        width: '200px',
+        width: '15%',
         height: '100vh', /* Full-height: remove this if you want "auto" height */
         position: 'fixed', /* Fixed Sidebar (stay in place on scroll) */
         zIndex: 1, /* Stay on top */
     },
     second:{
         backgroundColor: '#b0b0ab',
-        marginLeft: '200px', /* Same as the width of the sidebar */
+        marginLeft: '15%', /* Same as the width of the sidebar */
+        width: '85%'
     }
 }));
 
 export default function ArticlePage() {
 
-    const face_recognition = ["Used openCV and a facial cascade to find faces in an image.\n"  +
-    " The [haarcascade_frontalface_default.xml]  Stump-based 24x24 discrete adaboost frontal face detector" +
-    " created by Rainer Lienhart.",
+    const face_recognition = ["Used openCV and a facial cascade to detect faces in an image.\n"  +
+    " The facial cascade is a hasrcascade frontal-face xml created by Rainer Lienhart.",
+
         "To run the code clone or download the project repo from GitHub. " +
-        "Install python 3 in your computer."
+        "Install python 3 in your computer. \n " +
+        "open the .py file and add any image you want to the img var \n"+
+            "run face.py \n"+
+            "Change scaleFactor and minNeighbours to see how it affects the runtime and accuracy!!"
+
+
+
         ,"https://files.realpython.com/media/face-detection-abba.ea2dcc6d3bda.jpg"]
 
 
@@ -118,7 +123,9 @@ export default function ArticlePage() {
 
                 />
             </TabPanel>
+
             <TabPanel value={value} index={1}>
+                <Media content1 =
                 {[...new Array(120)]
                     .map(
                         () => `Cras mattis consectetur purus sit amet fermentum.
@@ -127,6 +134,7 @@ export default function ArticlePage() {
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
                     )
                     .join('\n')}
+                       />
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Item Three

@@ -56,7 +56,7 @@ export default function MainBody() {
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column textAlign='center'>
-                            <Link to="/ArticlePage">
+                            <Link to="/AuthPage">
                             <Button size='huge' >Check Them Out</Button>
                             </Link>
                         </Grid.Column>
@@ -70,14 +70,16 @@ export default function MainBody() {
                             <Header as='h3' style={{ fontSize: '2em' }}>
                                 "What is Apache Kafka?"
                             </Header>
-                            <p style={{ fontSize: '1.33em' }}>It's amazing!! Find out more.</p>
+                            <p style={{ fontSize: '1.33em' }}>It's an streaming platform capable of handling trillions of events a day.
+                                <br/>Find out more.</p>
                         </Grid.Column>
                         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                             <Header as='h3' style={{ fontSize: '2em' }}>
                                 "Paranoid about apps tracking you?"
                             </Header>
                             <p style={{ fontSize: '1.33em' }}>
-                                 Learn about analytics and stay one step ahead.
+                                 Learn more about platforms like google analytics and amplitude
+                                <br/>and stay one step ahead.
                             </p>
                         </Grid.Column>
                     </Grid.Row>
