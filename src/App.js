@@ -18,11 +18,20 @@ import LoginPage from "./Pages/Login";
 
 import ArticlePage from "./Pages/ArticlePage";
 import AuthUser from "./Pages/AuthUser";
+import { useAuth0 } from "./react-auth0-spa";
 
+function AppAuth() {
+  const {loading} = useAuth0();
 
-class App extends Component {
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+}
+
+export default class App extends Component {
   render() {
     return (
+        <div className="AppAuth">
 
         <Router>
           {/*All our Routes goes here!*/}
@@ -35,12 +44,12 @@ class App extends Component {
             <Route exact path ="/ArticlePage" component={ArticlePage}/>
             <Route exact path ="/AuthPage" component={AuthUser}/>
         </Router>
+        </div>
 
     );
   }
 }
 
-export default App;
 /*
 
 <Route exact path="/users" component={UsersPage} />
