@@ -17,6 +17,7 @@ import Contact from "./Pages/ContactPage";
 import LoginPage from "./Pages/Login";
 
 import ArticlePage from "./Pages/ArticlePage";
+import AuthUser from "./Pages/AuthUser";
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             <Route exact path ="/Contact" component={Contact}/>
             <Route exact path ="/LoginPage" component={LoginPage}/>
             <Route exact path ="/ArticlePage" component={ArticlePage}/>
+            <Route exact path ="/AuthPage" component={AuthUser}/>
         </Router>
 
     );
