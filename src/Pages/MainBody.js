@@ -1,7 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import {
@@ -9,14 +7,10 @@ import {
     Divider,
     Grid,
     Header,
-    Icon,
     Image,
-    List,
-    Menu,
-    Responsive,
+
     Segment,
-    Sidebar,
-    Visibility,
+
 } from 'semantic-ui-react';
 import {Link} from "react-router-dom";
 
@@ -37,11 +31,10 @@ export default function MainBody() {
                     <Grid.Row>
                         <Grid.Column width={8}>
                             <Header as='h3' style={{ fontSize: '2em' }}>
-                                Built for fun
+                                Hi! I am Praphul Shivakoti
                             </Header>
                             <p style={{ fontSize: '1.33em' }}>
-                                I built this website first just to play around with react and some backend with MongoDB then decided to
-                                put up some articles which might be helpful for CS students and decided to host it.
+                                Lorem ipsum
                             </p>
                             <Header as='h3' style={{ fontSize: '2em' }}>
                                 Want to check out some fun projects!!
@@ -110,49 +103,14 @@ export default function MainBody() {
                         Did We Tell You About Our Bananas?
                     </Header>
                     <p style={{ fontSize: '1.33em' }}>
-                        Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-                        it's really true. It took years of gene splicing and combinatory DNA research, but our
-                        bananas can really dance.
+                        View my resume as a timeline.
                     </p>
                     <Button as='a' size='large'>
-                        I'm Still Quite Interested
+                        Time-Line
                     </Button>
                 </Container>
             </Segment>
-            <Segment inverted vertical style={{ padding: '5em 0em' }}>
-                <Container>
-                    <Grid divided inverted stackable>
-                        <Grid.Row>
-                            <Grid.Column width={3}>
-                                <Header inverted as='h4' content='About' />
-                                <List link inverted>
-                                    <List.Item as='a'>Sitemap</List.Item>
-                                    <List.Item as='a'>Contact Us</List.Item>
-                                    <List.Item as='a'>Religious Ceremonies</List.Item>
-                                    <List.Item as='a'>Gazebo Plans</List.Item>
-                                </List>
-                            </Grid.Column>
-                            <Grid.Column width={3}>
-                                <Header inverted as='h4' content='Services' />
-                                <List link inverted>
-                                    <List.Item as='a'>Banana Pre-Order</List.Item>
-                                    <List.Item as='a'>DNA FAQ</List.Item>
-                                    <List.Item as='a'>How To Access</List.Item>
-                                    <List.Item as='a'>Favorite X-Men</List.Item>
-                                </List>
-                            </Grid.Column>
-                            <Grid.Column width={7}>
-                                <Header as='h4' inverted>
-                                    Footer Header
-                                </Header>
-                                <p>
-                                    Extra space for a call to action inside the footer that could help re-engage users.
-                                </p>
-                            </Grid.Column>
-                        </Grid.Row>
-                    </Grid>
-                </Container>
-            </Segment>
+
         </Box>
         </div>
     );

@@ -2,21 +2,26 @@
 
 
 
-import React, { Component } from 'react'
-import { Menu, Segment } from 'semantic-ui-react'
+import React, { Component, createRef } from 'react'
+import {Menu, Segment, Sticky} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
-export default class TopAppBar extends Component {
+
+export default class NavigationBar extends Component {
     state = { activeItem: 'Home' }
+
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
     render() {
+        const classes = this.props
         const { activeItem } = this.state
 
         return (
-            <div>
-                <Menu pointing secondary style={{ paddingLeft: '25PX ' }}>
+            <div ref={this.contextRef}>
+            <Sticky context={this.contextRef}>
+                <Menu  attached = 'top' tabular
+                       style={{ backgroundColor: '#aec2bb', paddingTop: '1em' }}>
                     <Link to="/MainBody">
                         <Menu.Item
                             name='Home'
@@ -24,10 +29,17 @@ export default class TopAppBar extends Component {
                             onClick={this.handleItemClick}
                         />
                     </Link>
-                    <Link to="/ArticlePage">
+                    <Link to="/TimeLine">
                         <Menu.Item
-                            name='Article'
-                            active={activeItem === 'Article'}
+                            name='TimeLine'
+                            active={activeItem === 'TimeLine'}
+                            onClick={this.handleItemClick}
+                        />
+                    </Link>
+                    <Link to="/Gallery">
+                        <Menu.Item
+                            name='Gallery'
+                            active={activeItem === 'Gallery'}
                             onClick={this.handleItemClick}
                         />
                     </Link>
@@ -38,21 +50,11 @@ export default class TopAppBar extends Component {
                             onClick={this.handleItemClick}
                         />
                     </Link>
-                    <Menu.Menu position='right' style={{ paddingRight: '25PX' }}>
-                    <Link to="/LoginPage" >
 
-                            <Menu.Item
-                                name='LogIn'
-                                active={activeItem === 'LogIn'}
-                                onClick={this.handleItemClick}
-
-                            />
-
-                    </Link>
-                    </Menu.Menu>
                 </Menu>
 
 
+            </Sticky>
             </div>
         )
     }
