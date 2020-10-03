@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     height: '94.5vh',
-    width: '100%',
+    width: '90%',
     position: 'absolute',
     left: 0,
     right: 0,
@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 
 sliderContent: {
+
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',

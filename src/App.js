@@ -8,8 +8,8 @@ import {
 
 
 
-import MainBody from "./Pages/MainBody";
-import Contact from "./Pages/ContactPage";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
 import NavigationBar from "./Component/NavigationBar";
 import TimeLine from "./Pages/TimeLine";
 import Gallery from "./Pages/Gallery";
@@ -22,8 +22,8 @@ export default class App extends Component {
 
 
           <NavigationBar />
-            <Route exact path ="/" component={MainBody}/>
-            <Route path ="/MainBody" component={ MainBody}/>
+            <Route exact path ="/" component={Home}/>
+            <Route path ="/MainBody" component={ Home}/>
             <Route path ="/TimeLine" component={TimeLine}/>
             <Route path ="/Contact" component={Contact}/>
             <Route path = "/Gallery" component={ Gallery}  />

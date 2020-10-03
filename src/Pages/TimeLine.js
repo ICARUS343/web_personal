@@ -9,7 +9,7 @@ import ListItem from "semantic-ui-react/dist/commonjs/elements/List/ListItem";
 import {ListItemText} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import List from "@material-ui/core/List";
-
+import Resume from '../Resources/Resume_PS_GRP.pdf';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
@@ -22,6 +22,7 @@ export default function TimeLine() {
     const classes = useStyles();
   return(
 
+    <div>
 
    <VerticalTimeline>
 
@@ -39,7 +40,7 @@ export default function TimeLine() {
                <ListItem>
                    <ListItemText>
                        Deployed and maintained web apps in AWS and Google cloud built
-                       using Django, React, REST API, and Node JS to develop web apps.
+                       using Django, React, REST API, and Node JS.
                    </ListItemText>
                </ListItem>
            </List>
@@ -181,6 +182,7 @@ export default function TimeLine() {
        </VerticalTimelineElement>
 
     </VerticalTimeline>
+    </div>
 
   )
 }

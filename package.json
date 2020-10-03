@@ -14,7 +14,10 @@
     "react-scripts": "^3.4.3",
     "react-toastify": "^5.4.1",
     "react-toasts": "^3.0.6",
-    "react-vertical-timeline-component": "^3.0.2"
+    "react-typing-animation": "^1.6.2",
+    "react-typing-effect": "^2.0.3",
+    "react-vertical-timeline-component": "^3.0.2",
+    "typewriter-effect": "^2.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
