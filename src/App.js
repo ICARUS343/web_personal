@@ -23,10 +23,10 @@ export default class App extends Component {
 
           <NavigationBar />
             <Route exact path ="/" component={Home}/>
-            <Route path ="/MainBody" component={ Home}/>
+            <Route path ="/MainBody" component={Home}/>
             <Route path ="/TimeLine" component={TimeLine}/>
             <Route path ="/Contact" component={Contact}/>
-            <Route path = "/Gallery" component={ Gallery}  />
+            <Route path = "/Gallery" component={Gallery}  />
 
 
         </Router>

@@ -10,12 +10,13 @@ import {
     Divider,
     Grid,
     Header,
-    Image,
+    Image, Menu,
 
     Segment,
 
 } from 'semantic-ui-react';
 import Resume from "../Resources/Resume_PS_GRP.pdf";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -64,15 +65,17 @@ export default function Home() {
                                     Check out my timeLine?
                                 </Header>
                                 <p style={{fontSize: '1.33em'}}>View at my life events as a time line</p>
+                                <Link to="/TimeLine">
                                 <Button as='a' size='large'>
                                     TimeLine
                                 </Button>
+                                </Link>
                                 <Grid.Row style={{paddingTop: '5em'}}>
                                     <p style={{fontSize: '1.33em'}}> Or download my resume here.</p>
                                     <Button as='a' size='large' >
-                                        <GetAppIcon color = 'primary' style={ {fontSize : '1.2em'}}/>
+                                        <GetAppIcon color = 'primary' style={ {fontSize : '1.2em' , paddingRight:'1.5em'}}/>
                                         <span style={ {fontSize : '1.5em'}} >RESUME</span>
-                                        <a href={Resume}></a>
+                                        <a href={Resume}/>
 
                                     </Button>
                                 </Grid.Row>
@@ -85,10 +88,12 @@ export default function Home() {
                                 <p style={{fontSize: '1.33em'}}>
                                     <p>I enjoy photography.</p>
 
-                                    I use my Nikon D5300 with a 18-140mm for most of my shots. </p>
+                                    Check out some of my pictures here. </p>
+                                <Link to="/Gallery">
                                 <Button as='a' size='large'>
                                     View
                                 </Button>
+                                </Link>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>

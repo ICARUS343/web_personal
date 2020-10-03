@@ -13,7 +13,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import {ToastsContainer, ToastsStore} from 'react-toasts';
 
 
-import {Button, Form, TextArea} from "semantic-ui-react";
+import {Button, Form, Segment, TextArea} from "semantic-ui-react";
+import Box from "@material-ui/core/Box";
 
 
 const useStyles = makeStyles(theme => ({
@@ -38,7 +39,7 @@ export default function Contact() {
     const classes = useStyles();
 
     return (
-
+        <Segment style={{padding: '0em'}} vertical>
         <div className={classes.root}>
             <List component="nav" aria-label="main contact list">
                 <ListItem button  onClick=  {() => {window.open("https://www.instagram.com/shivakotipraphul/")}}
@@ -116,6 +117,7 @@ export default function Contact() {
 
 
         </div>
+        </Segment>
 
     );
 }
