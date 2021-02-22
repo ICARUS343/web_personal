@@ -21,6 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,9 +47,11 @@
     "@material-ui/icons": "^4.5.1",
     "faker": "^4.1.0",
     "file-loader": "^6.1.0",
+    "gh-pages": "^3.1.0",
     "react-responsive": "^8.0.1",
     "react-router-dom": "^5.1.2",
     "semantic-ui-react": "^0.88.1",
     "url-loader": "^4.1.0"
-  }
+  },
+  "homepage":  "http://icarus343.github.io/web_personal"
 }
