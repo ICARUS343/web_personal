@@ -1,8 +1,14 @@
 {
+
+"homepage": "http://icarus343.github.io/web_personal",
+
+
+
   "name": "web_personal",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "dependencies":
+    {
     "@material-ui/core": "^4.7.0",
     "@material-ui/lab": "^4.0.0-alpha.33",
     "prop-types": "latest",
@@ -18,40 +24,45 @@
     "react-typing-effect": "^2.0.3",
     "react-vertical-timeline-component": "^3.0.2",
     "typewriter-effect": "^2.13.1"
-  },
-  "scripts": {
+    },
+  "scripts":
+    {
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
+    },
+  "eslintConfig":
+    {
     "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
+    },
+  "browserslist":
+    {
+    "production":
+    [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
-    "development": [
+    "development":
+    [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
+  "devDependencies":
+    {
     "@auth0/auth0-spa-js": "^1.6.0",
     "@material-ui/icons": "^4.5.1",
     "faker": "^4.1.0",
     "file-loader": "^6.1.0",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^3.2.3",
     "react-responsive": "^8.0.1",
     "react-router-dom": "^5.1.2",
     "semantic-ui-react": "^0.88.1",
     "url-loader": "^4.1.0"
-  },
-  "homepage":  "http://icarus343.github.io/MainBody"
+    }
 }
